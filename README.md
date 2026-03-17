@@ -1,5 +1,7 @@
 # npm-gui-next
 
+[![npm version](https://img.shields.io/npm/v/npm-gui-next.svg)](https://www.npmjs.com/package/npm-gui-next)
+
 `npm-gui-next` is the resurrection of the original `npm-gui` project after roughly three years of inactivity. It keeps the original idea intact, then modernizes the stack, restores maintenance, and continues development as a fork maintained by Apostol Apostolov.
 
 `npm-gui-next` is a desktop-local web UI for managing JavaScript dependencies in real projects. It can inspect, install, remove, reinstall, and update packages using the package manager already used by the project: `npm`, `pnpm`, `yarn`, or `bun`.
@@ -9,6 +11,7 @@
 </p>
 
 Repository: https://github.com/apoapostolov/npm-gui-next
+Package: https://www.npmjs.com/package/npm-gui-next
 
 ## What It Does
 

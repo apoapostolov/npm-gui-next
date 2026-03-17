@@ -92,8 +92,14 @@ When behavior, runtime expectations, or dependencies change, update relevant doc
   - `Added`
   - `Changed`
   - `Fixed`
-  - `Removed`
+- `Removed`
 - Do not add changelog entries for internal-only refactors, test-only changes, or agent-instructions-only updates unless the user explicitly asks.
+
+## Release Reminder
+
+- When preparing or finishing a new release, explicitly remind the user that publishing to npm is a separate manual step and include the exact command: `npm publish`.
+- If npm publish can require web-based auth or 2FA confirmation, say that directly so the user does not forget after versioning/tagging work is done.
+- If release-related docs are touched, keep the npm package name explicit: `npm-gui-next`.
 
 ## Dependency Hygiene
 

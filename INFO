@@ -1,0 +1,10 @@
+<div>
+  <p style="display:inline-block;color: #9ad14b; font-weight: bold;">You are running npm-gui-next.</p>
+
+  <pre style="display:inline-block; vertical-align: middle; color: white;">npx npm-gui-next@latest</pre>
+
+<span style="color: white;">Fork of npm-gui, maintained by Apostol Apostolov.</span>
+
+<a href="https://github.com/apoapostolov/npm-gui-next" style="color:white; font-weight: bold;">GitHub repository</a>
+
+</div>

@@ -1,0 +1,103 @@
+{
+  "name": "npm-gui-next",
+  "version": "5.0.1",
+  "description": "A graphical tool for managing JavaScript project dependencies. Fork of npm-gui.",
+  "keywords": [
+    "gui",
+    "npm",
+    "yarn",
+    "pnpm",
+    "view",
+    "client",
+    "dependencies",
+    "node_modules",
+    "packages",
+    "installer",
+    "manager"
+  ],
+  "main": "index.js",
+  "module": "dist/module.js",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "prepack": "npm run build",
+    "dev:server": "ts-node-dev --files server/development.ts",
+    "dev:client": "parcel serve --target=client",
+    "dev": "npm-run-all -p dev:*",
+    "build": "rm -rf dist && parcel build --no-source-maps",
+    "lint:ts": "tsc",
+    "lint:eslint": "eslint . --ignore-path=.gitignore",
+    "lint:prettier": "prettier --check . --ignore-path=.gitignore",
+    "lint": "npm-run-all lint:* -p",
+    "test": "jest",
+    "ci:test": "env NODE_TEST=true npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apoapostolov/npm-gui-next.git"
+  },
+  "author": "Apostol Apostolov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apoapostolov/npm-gui-next/issues"
+  },
+  "bin": {
+    "npm-gui-next": "index.js"
+  },
+  "homepage": "https://github.com/apoapostolov/npm-gui-next",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/supertest": "^7.2.0",
+    "eslint-config-turbocharge": "^0.1.8",
+    "fs-extra": "^11.3.4",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "jest-extended": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.16.4",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.4.6",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  },
+  "targets": {
+    "main": false,
+    "client": {
+      "source": "client/index.html",
+      "context": "browser",
+      "distDir": "dist"
+    },
+    "server": {
+      "source": "server/index.ts",
+      "context": "node",
+      "outputFormat": "commonjs",
+      "distDir": "dist"
+    }
+  },
+  "alias": {
+    "react-router/dom": "react-router/dist/development/dom-export.mjs"
+  },
+  "dependencies": {
+    "@tanstack/query-sync-storage-persister": "^5.90.24",
+    "@tanstack/react-query": "^5.90.21",
+    "@tanstack/react-query-persist-client": "^5.90.24",
+    "open": "^11.0.0",
+    "process": "^0.11.10",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.13.1",
+    "styled-components": "^6.3.11",
+    "use-between": "^1.4.0"
+  },
+  "engines": {
+    "node": ">= 20.0.0",
+    "npm": ">= 6.0.0"
+  }
+}

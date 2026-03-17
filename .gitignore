@@ -1,0 +1,16 @@
+.idea
+node_modules
+bower_components
+npm-debug*
+dist
+npm-gui*
+electron
+report.*
+.cache
+tests/test-projec*
+tsconfig.tsbuildinfo
+.cache
+eslint-config*
+.nyc_output
+.parcel-cache
+coverage
